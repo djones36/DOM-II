@@ -14,18 +14,38 @@ busImg.addEventListener('dblclick', displayNon =>{
     busImg.style.display = "none"
 })
 
-//4.
-// let bodyP = document.querySelectorAll('h1')
-// bodyP.addEventListener('scroll', changeColor =>{
-//     bodyP.style.color = "red"
-// })
-
-
+//4. click changes Welcome To Fun Bus! to red.
+let bodyH2 = document.querySelector('h2')
+bodyH2.addEventListener('click', changeColor =>{
+    bodyH2.style.color = "red"
+})
 
 //5. tells you window size on resizing.
 window.addEventListener('resize', event => {
     alert(`The window size is at ${window.innerHeight} by ${window.innerWidth}`)
 })
 
+//6. mouse over changes background to blue.
+let paragraph = document.querySelector('.home')
+paragraph.addEventListener('mouseover', event => {event.target.style.background = "blue"})
 
-//6.
+//
+
+//7.
+
+
+//8.
+
+
+//9.
+
+
+//10.
+
+//Prevent default of nav
+let navStop = document.querySelectorAll('nav a')
+navStop.forEach(event => {
+    event.addEventListener('click', event => {
+        event.preventDefault()
+    })
+})
