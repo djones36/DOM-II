@@ -26,21 +26,39 @@ window.addEventListener('resize', event => {
 })
 
 //6. mouse over changes background to blue.
-let paragraph = document.querySelector('.home')
-paragraph.addEventListener('mouseover', event => {event.target.style.background = "blue"})
+let home = document.querySelector('.home')
+home.addEventListener('mouseover', event => {event.target.style.background = "blue"})
 
-//
+//stop propagation
+let homeStop = document.querySelector('.text-content')
+homeStop.addEventListener('mouseover', event => {
+    event.target.style.background = "red"
+    event.stopPropagation();
+})
 
-//7.
+//7. mouse enter yellow border on destination
+let destinationP = document.querySelector('.destination p')
+destinationP.addEventListener('mouseenter', event =>{
+    event.target.style.border = "10px solid yellow"
+})
 
+//8. Alert message on load 
+window.addEventListener('load', event =>{
+    alert('WELCOME TO THE FUN BUS!')
+})
 
-//8.
-
-
-//9.
-
+//9. click first button to change background to black.
+let button = document.querySelector('.destination .btn')
+button.addEventListener('click', event =>{
+    event.target.style.background = "black"
+})
 
 //10.
+let rightClick = document.querySelector('.content-destination')
+rightClick.addEventListener('contextmenu', event =>{
+    event.target.style.background = "pink"
+})
+
 
 //Prevent default of nav
 let navStop = document.querySelectorAll('nav a')
